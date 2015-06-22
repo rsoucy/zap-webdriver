@@ -57,6 +57,7 @@ public class MyAppNavigation {
    }
 
     public void registerUser() {
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get(BASE_URL+"register.jsp");
         driver.findElement(By.id("username")).clear();
         driver.findElement(By.id("username")).sendKeys(USERNAME);
@@ -83,7 +84,7 @@ public class MyAppNavigation {
     public void navigateBeforeLogin() {
         driver.get(BASE_URL);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.findElement(By.linkText("forgotpassword")).click();
+        driver.findElement(By.linkText("lifeIMAGE.com")).click();
         //driver.findElement(By.linkText("Doodahs")).click();
         //driver.findElement(By.linkText("Zip a dee doo dah")).click();
         //driver.findElement(By.linkText("About Us")).click();
@@ -95,7 +96,7 @@ public class MyAppNavigation {
         //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
 
         //Make sure we're on the page we're supposed to be on
-        verifyTextPresent("Forgot your password?");
+        verifyTextPresent("HOME");
     //    driver.findElement(By.linkText("Search")).click();
     //    driver.findElement(By.linkText("Advanced Search")).click();
     //    driver.findElement(By.id("product")).clear();
