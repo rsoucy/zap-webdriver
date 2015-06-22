@@ -53,7 +53,7 @@ public class MyAppNavigation {
         driver.findElement(By.id("login_password")).clear();
         driver.findElement(By.id("login_password")).sendKeys(PASSWORD);
         driver.findElement(By.name("submit")).click();
-        verifyTextPresent("successfully");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
    }
 
     //public void registerUser() {
