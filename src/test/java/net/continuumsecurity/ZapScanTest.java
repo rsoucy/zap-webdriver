@@ -67,7 +67,7 @@ public class ZapScanTest {
         log.info("Created client to ZAP API");
         driver = DriverFactory.createProxyDriver("chrome",createZapProxyConfigurationForWebDriver(), CHROME_DRIVER_PATH);
         myApp = new MyAppNavigation(driver);
-        myApp.registerUser(); //Doesn't matter if user already exists, bodgeit just throws an error
+        //myApp.registerUser(); //Doesn't matter if user already exists, bodgeit just throws an error
     }
 
     @After
