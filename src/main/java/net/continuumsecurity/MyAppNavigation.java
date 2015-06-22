@@ -65,42 +65,42 @@ public class MyAppNavigation {
         driver.findElement(By.id("submit")).click();
     }
 
-    public void navigateBeforeLogin() {
-        driver.get(BASE_URL);
-        driver.findElement(By.linkText("Home")).click();
-        driver.findElement(By.linkText("Doodahs")).click();
-        driver.findElement(By.linkText("Zip a dee doo dah")).click();
-        driver.findElement(By.linkText("About Us")).click();
-        driver.findElement(By.linkText("Scoring page")).click();
-        driver.findElement(By.linkText("Your Basket")).click();
-        driver.findElement(By.linkText("Search")).click();
-        driver.findElement(By.name("q")).clear();
-        driver.findElement(By.name("q")).sendKeys("test");
-        driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+    //public void navigateBeforeLogin() {
+    //    driver.get(BASE_URL);
+    //    driver.findElement(By.linkText("Home")).click();
+    //    driver.findElement(By.linkText("Doodahs")).click();
+    //    driver.findElement(By.linkText("Zip a dee doo dah")).click();
+    //    driver.findElement(By.linkText("About Us")).click();
+    //    driver.findElement(By.linkText("Scoring page")).click();
+    //    driver.findElement(By.linkText("Your Basket")).click();
+    //    driver.findElement(By.linkText("Search")).click();
+    //    driver.findElement(By.name("q")).clear();
+    //    driver.findElement(By.name("q")).sendKeys("test");
+    //    driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
 
         //Make sure we're on the page we're supposed to be on
-        verifyTextPresent("Results Found");
-        driver.findElement(By.linkText("Search")).click();
-        driver.findElement(By.linkText("Advanced Search")).click();
-        driver.findElement(By.id("product")).clear();
-        driver.findElement(By.id("product")).sendKeys("test");
-        driver.findElement(By.id("desc")).clear();
-        driver.findElement(By.id("desc")).sendKeys("test");
-        driver.findElement(By.id("type")).clear();
-        driver.findElement(By.id("type")).sendKeys("test");
-        driver.findElement(By.id("price")).clear();
-        driver.findElement(By.id("price")).sendKeys("test");
-        driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+    //    verifyTextPresent("Results Found");
+    //    driver.findElement(By.linkText("Search")).click();
+    //    driver.findElement(By.linkText("Advanced Search")).click();
+    //    driver.findElement(By.id("product")).clear();
+    //    driver.findElement(By.id("product")).sendKeys("test");
+    //    driver.findElement(By.id("desc")).clear();
+    //    driver.findElement(By.id("desc")).sendKeys("test");
+    //    driver.findElement(By.id("type")).clear();
+    //   driver.findElement(By.id("type")).sendKeys("test");
+    //    driver.findElement(By.id("price")).clear();
+    //    driver.findElement(By.id("price")).sendKeys("test");
+    //    driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
 
         //Make sure we're on the page we're supposed to be on
-        verifyTextPresent("Results Found");
-    }
+    //    verifyTextPresent("Results Found");
+    //}
 
-    public void navigateAfterLogin() {
-        driver.findElement(By.linkText("Doodahs")).click();
-        driver.findElement(By.linkText("Zip a dee doo dah")).click();
-        driver.findElement(By.id("submit")).click();
-    }
+    //public void navigateAfterLogin() {
+    //    driver.findElement(By.linkText("Doodahs")).click();
+    //    driver.findElement(By.linkText("Zip a dee doo dah")).click();
+    //    driver.findElement(By.id("submit")).click();
+    /}
 
 
     public void verifyTextPresent(String text) {
