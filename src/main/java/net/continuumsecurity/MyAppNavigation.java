@@ -107,7 +107,7 @@ public class MyAppNavigation {
 
         //Make sure we're on the page we're supposed to be on
     //    verifyTextPresent("Results Found");
-    //}
+    }
 
     public void navigateAfterLogin() {
         driver.find_element_by_xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]").click()
