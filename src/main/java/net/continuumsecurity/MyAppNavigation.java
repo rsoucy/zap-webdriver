@@ -33,6 +33,7 @@ import org.openqa.selenium.WebDriver;
     
 public class MyAppNavigation {
     WebDriver driver;
+    driver.implicitly_wait(30);
     final static String BASE_URL = "http://dev-cloud-auto2:7070/universal-inbox/login";
     final static String LOGOUT_URL = "http://dev-cloud-auto2:7070/universal-inbox/logout.jsp";
     final static String USERNAME = "donotreply+1515@lifeimage.com";
