@@ -86,7 +86,7 @@ public class MyAppNavigation {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.linkText("lifeIMAGE.com")).click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.findElement(By.linkText("Solutions")).click();
+        //driver.findElement(By.linkText("Solutions")).click();
         //driver.findElement(By.linkText("Doodahs")).click();
         //driver.findElement(By.linkText("Zip a dee doo dah")).click();
         //driver.findElement(By.linkText("About Us")).click();
@@ -96,7 +96,6 @@ public class MyAppNavigation {
         //driver.findElement(By.name("q")).clear();
         //driver.findElement(By.name("q")).sendKeys("test");
         //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //Make sure we're on the page we're supposed to be on
         //verifyTextPresent("Customers");
     //    driver.findElement(By.linkText("Search")).click();
