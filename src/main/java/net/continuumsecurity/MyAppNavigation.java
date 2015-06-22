@@ -100,7 +100,7 @@ public class MyAppNavigation {
     //    driver.findElement(By.linkText("Doodahs")).click();
     //    driver.findElement(By.linkText("Zip a dee doo dah")).click();
     //    driver.findElement(By.id("submit")).click();
-    /}
+    //}
 
 
     public void verifyTextPresent(String text) {
