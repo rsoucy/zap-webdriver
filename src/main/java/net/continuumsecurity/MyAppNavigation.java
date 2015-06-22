@@ -110,13 +110,12 @@ public class MyAppNavigation {
     }
 
     public void navigateAfterLogin() {
-        driver.find_element_by_xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]").click()
-        driver.find_element_by_css_selector("span.folder-list-item-title").click()
-        driver.find_element_by_xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]").click()
-        driver.find_element_by_css_selector("span.folder-list-item-title").click()
-        self.driver.implicitly_wait(60)
+        driver.findElement_by_xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]").click();
+        driver.findElement_by_css_selector("span.folder-list-item-title").click();
+        driver.findElement_by_xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]").click();
+        driver.findElement_by_css_selector("span.folder-list-item-title").click();
+        driver.implicitly_wait(60);
     }
-
 
     public void verifyTextPresent(String text) {
         if (!this.driver.getPageSource().contains(text)) throw new RuntimeException("Expected text: ["+text+"] was not found.");
