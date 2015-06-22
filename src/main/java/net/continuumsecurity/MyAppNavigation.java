@@ -96,7 +96,7 @@ public class MyAppNavigation {
         //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
 
         //Make sure we're on the page we're supposed to be on
-        verifyTextPresent("HOME");
+        verifyTextPresent("Customers");
     //    driver.findElement(By.linkText("Search")).click();
     //    driver.findElement(By.linkText("Advanced Search")).click();
     //    driver.findElement(By.id("product")).clear();
