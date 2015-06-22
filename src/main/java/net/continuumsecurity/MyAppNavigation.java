@@ -78,8 +78,21 @@ public class MyAppNavigation {
     //    driver.findElement(By.name("q")).sendKeys("test");
     //    driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
 
+    public void navigateBeforeLogin() {
+        driver.get(BASE_URL);
+        driver.findElement(By.linkText("forgotpassword")).click();
+        //driver.findElement(By.linkText("Doodahs")).click();
+        //driver.findElement(By.linkText("Zip a dee doo dah")).click();
+        //driver.findElement(By.linkText("About Us")).click();
+        //driver.findElement(By.linkText("Scoring page")).click();
+        //driver.findElement(By.linkText("Your Basket")).click();
+        //driver.findElement(By.linkText("Search")).click();
+        //driver.findElement(By.name("q")).clear();
+        //driver.findElement(By.name("q")).sendKeys("test");
+        //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+
         //Make sure we're on the page we're supposed to be on
-    //    verifyTextPresent("Results Found");
+        verifyTextPresent("Forgot your password?");
     //    driver.findElement(By.linkText("Search")).click();
     //    driver.findElement(By.linkText("Advanced Search")).click();
     //    driver.findElement(By.id("product")).clear();
@@ -96,11 +109,13 @@ public class MyAppNavigation {
     //    verifyTextPresent("Results Found");
     //}
 
-    //public void navigateAfterLogin() {
-    //    driver.findElement(By.linkText("Doodahs")).click();
-    //    driver.findElement(By.linkText("Zip a dee doo dah")).click();
-    //    driver.findElement(By.id("submit")).click();
-    //}
+    public void navigateAfterLogin() {
+        driver.find_element_by_xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]").click()
+        driver.find_element_by_css_selector("span.folder-list-item-title").click()
+        driver.find_element_by_xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]").click()
+        driver.find_element_by_css_selector("span.folder-list-item-title").click()
+        self.driver.implicitly_wait(60)
+    }
 
 
     public void verifyTextPresent(String text) {
