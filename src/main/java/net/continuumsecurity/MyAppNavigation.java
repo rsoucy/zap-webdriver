@@ -110,10 +110,10 @@ public class MyAppNavigation {
     }
 
     public void navigateAfterLogin() {
-        driver.findElement_by_xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]").click();
-        driver.findElement_by_css_selector("span.folder-list-item-title").click();
-        driver.findElement_by_xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]").click();
-        driver.findElement_by_css_selector("span.folder-list-item-title").click();
+        driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]")).click();
+        driver.findElement(By.css_selector("span.folder-list-item-title")).click();
+        driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]")).click();
+        driver.findElement(By.css_selector("span.folder-list-item-title")).click();
         driver.implicitly_wait(60);
     }
 
