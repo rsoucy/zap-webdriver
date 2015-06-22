@@ -24,12 +24,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
+//public class MyAppNavigation {
+//    WebDriver driver;
+//    final static String BASE_URL = "http://localhost:8080/bodgeit/";
+//    final static String LOGOUT_URL = "http://localhost:8080/bodgeit/logout.jsp";
+//    final static String USERNAME = "bobby@continuumsecurity.net";
+//    final static String PASSWORD = "tables";
+    
 public class MyAppNavigation {
     WebDriver driver;
-    final static String BASE_URL = "http://localhost:8080/bodgeit/";
-    final static String LOGOUT_URL = "http://localhost:8080/bodgeit/logout.jsp";
-    final static String USERNAME = "bobby@continuumsecurity.net";
-    final static String PASSWORD = "tables";
+    final static String BASE_URL = "http://dev-cloud-auto2:7070/universal-inbox/login";
+    final static String LOGOUT_URL = "http://dev-cloud-auto2:7070/universal-inbox/logout.jsp";
+    final static String USERNAME = "donotreply+1515@lifeimage.com";
+    final static String PASSWORD = "lifeimage1_new";
+
 
     public MyAppNavigation(WebDriver driver) {
         this.driver = driver;
@@ -38,10 +46,10 @@ public class MyAppNavigation {
     public void login() {
         driver.get(BASE_URL);
         driver.findElement(By.linkText("Login")).click();
-        driver.findElement(By.id("username")).clear();
-        driver.findElement(By.id("username")).sendKeys(USERNAME);
-        driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys(PASSWORD);
+        driver.findElement(By.id("login_username")).clear();
+        driver.findElement(By.id("login_username")).sendKeys(USERNAME);
+        driver.findElement(By.id("login_password")).clear();
+        driver.findElement(By.id("login_password")).sendKeys(PASSWORD);
         driver.findElement(By.id("submit")).click();
         verifyTextPresent("successfully");
    }
