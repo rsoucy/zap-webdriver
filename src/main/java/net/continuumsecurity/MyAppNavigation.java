@@ -47,7 +47,7 @@ public class MyAppNavigation {
     public void login() {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get(BASE_URL);
-        driver.findElement(By.linkText("Login")).click();
+        driver.findElement(By.linkText("login")).click();
         driver.findElement(By.id("login_username")).clear();
         driver.findElement(By.id("login_username")).sendKeys(USERNAME);
         driver.findElement(By.id("login_password")).clear();
