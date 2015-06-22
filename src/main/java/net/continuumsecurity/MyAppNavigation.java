@@ -52,7 +52,7 @@ public class MyAppNavigation {
         driver.findElement(By.id("login_username")).sendKeys(USERNAME);
         driver.findElement(By.id("login_password")).clear();
         driver.findElement(By.id("login_password")).sendKeys(PASSWORD);
-        driver.findElement(By.id("submit")).click();
+        driver.findElement(By.name("submit")).click();
         verifyTextPresent("successfully");
    }
 
