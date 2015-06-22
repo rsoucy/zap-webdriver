@@ -44,7 +44,7 @@ public class MyAppNavigation {
     }
 
     public void login() {
-        driver.implicitly_wait(30);
+        driver.implicitlyWait(30);
         driver.get(BASE_URL);
         driver.findElement(By.linkText("login")).click();
         driver.findElement(By.id("login_username")).clear();
@@ -81,7 +81,7 @@ public class MyAppNavigation {
 
     public void navigateBeforeLogin() {
         driver.get(BASE_URL);
-        driver.implicitly_wait(30);
+        driver.implicitlyWait(30);
         driver.findElement(By.linkText("forgotpassword")).click();
         //driver.findElement(By.linkText("Doodahs")).click();
         //driver.findElement(By.linkText("Zip a dee doo dah")).click();
