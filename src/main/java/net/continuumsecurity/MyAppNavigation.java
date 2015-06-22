@@ -56,17 +56,17 @@ public class MyAppNavigation {
         verifyTextPresent("successfully");
    }
 
-    public void registerUser() {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(BASE_URL+"register.jsp");
-        driver.findElement(By.id("username")).clear();
-        driver.findElement(By.id("username")).sendKeys(USERNAME);
-        driver.findElement(By.id("password1")).clear();
-        driver.findElement(By.id("password1")).sendKeys(PASSWORD);
-        driver.findElement(By.id("password2")).clear();
-        driver.findElement(By.id("password2")).sendKeys(PASSWORD);
-        driver.findElement(By.id("submit")).click();
-    }
+    //public void registerUser() {
+    //    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    //    driver.get(BASE_URL+"register.jsp");
+    //    driver.findElement(By.id("username")).clear();
+    //    driver.findElement(By.id("username")).sendKeys(USERNAME);
+    //    driver.findElement(By.id("password1")).clear();
+    //    driver.findElement(By.id("password1")).sendKeys(PASSWORD);
+    //    driver.findElement(By.id("password2")).clear();
+    //    driver.findElement(By.id("password2")).sendKeys(PASSWORD);
+    //    driver.findElement(By.id("submit")).click();
+    //}
 
     //public void navigateBeforeLogin() {
     //    driver.get(BASE_URL);
