@@ -94,7 +94,7 @@ public class MyAppNavigation {
         //driver.findElement(By.name("q")).clear();
         //driver.findElement(By.name("q")).sendKeys("test");
         //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //Make sure we're on the page we're supposed to be on
         verifyTextPresent("Customers");
     //    driver.findElement(By.linkText("Search")).click();
