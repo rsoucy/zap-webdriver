@@ -53,7 +53,7 @@ public class MyAppNavigation {
         driver.findElement(By.id("login_password")).clear();
         driver.findElement(By.id("login_password")).sendKeys(PASSWORD);
         driver.findElement(By.name("submit")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
    }
 
     //public void registerUser() {
@@ -83,7 +83,7 @@ public class MyAppNavigation {
 
     public void navigateBeforeLogin() {
         driver.get(BASE_URL);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.linkText("lifeIMAGE.com")).click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //driver.findElement(By.linkText("Solutions")).click();
@@ -115,6 +115,7 @@ public class MyAppNavigation {
     }
 
     public void navigateAfterLogin() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]")).click();
         driver.findElement(By.cssSelector("span.folder-list-item-title")).click();
         driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]")).click();
