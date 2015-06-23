@@ -75,21 +75,21 @@ public class ZapScanTest {
         driver.quit();
     }
 
-    @Test
-    public void testSecurityVulnerabilitiesBeforeLogin() {
-        myApp.navigateBeforeLogin();
-        log.info("Spidering...");
-        spiderWithZap();
-        log.info("Spider done.");
+    //@Test
+    //public void testSecurityVulnerabilitiesBeforeLogin() {
+    //    myApp.navigateBeforeLogin();
+    //    log.info("Spidering...");
+    //    spiderWithZap();
+    //    log.info("Spider done.");
 
-        setAlertAndAttackStrength();
-        zapScanner.setEnablePassiveScan(true);
-        scanWithZap();
+    //    setAlertAndAttackStrength();
+    //    zapScanner.setEnablePassiveScan(true);
+    //    scanWithZap();
 
-        List<Alert> alerts = filterAlerts(zapScanner.getAlerts());
-        logAlerts(alerts);
-        assertThat(alerts.size(), equalTo(0));
-    }
+    //    List<Alert> alerts = filterAlerts(zapScanner.getAlerts());
+    //    logAlerts(alerts);
+    //    assertThat(alerts.size(), equalTo(0));
+    //}
 
     @Test
     public void testSecurityVulnerabilitiesAfterLogin() {
