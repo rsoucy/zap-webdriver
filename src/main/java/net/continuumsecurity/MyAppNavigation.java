@@ -119,7 +119,7 @@ public class MyAppNavigation {
         driver.findElement(By.cssSelector("span.folder-list-item-title")).click();
         driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]")).click();
         driver.findElement(By.cssSelector("span.folder-list-item-title")).click();
-        driver.implicitly_wait(10);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     public void verifyTextPresent(String text) {
