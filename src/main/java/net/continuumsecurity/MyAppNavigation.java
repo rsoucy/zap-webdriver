@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
     
 public class MyAppNavigation {
     WebDriver driver;
-    final static String BASE_URL = "http://dev-cloud-auto2:7070/universal-inbox/login";
+    final static String BASE_URL = "http://dev-cloud-auto2:7070/universal-inbox/outbox";
     final static String LOGOUT_URL = "http://dev-cloud-auto2:7070/universal-inbox/logout.jsp";
     final static String USERNAME = "donotreply+1515@lifeimage.com";
     final static String PASSWORD = "lifeimage1_new";
