@@ -120,7 +120,7 @@ public class ZapScanTest {
     private List<Alert> filterAlerts(List<Alert> alerts) {
        List<Alert> filtered = new ArrayList<Alert>();
        for (Alert alert : alerts) {
-           if (alert.getRisk().equals(Alert.Risk.High) && alert.getReliability() != Alert.Reliability.Suspicious) filtered.add(alert);
+           if (alert.getRisk().equals(Alert.Risk.High) && alert.getReliability() != Alert.Reliability.Suspicious || alert.getRisk().equals(Alert.Risk.Medium)) filtered.add(alert);
        }
        return filtered;
     }
