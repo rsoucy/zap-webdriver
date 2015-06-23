@@ -45,9 +45,9 @@ public class MyAppNavigation {
     }
 
     public void login() {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get(BASE_URL);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.id("login_username")).clear();
         driver.findElement(By.id("login_username")).sendKeys(USERNAME);
         driver.findElement(By.id("login_password")).clear();
@@ -115,7 +115,7 @@ public class MyAppNavigation {
     }
 
     public void navigateAfterLogin() {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector("span.folder-list-item-title")).click();
