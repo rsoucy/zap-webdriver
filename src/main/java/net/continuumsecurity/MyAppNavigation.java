@@ -127,7 +127,7 @@ public class MyAppNavigation {
         //driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]")).click();
         //driver.findElement(By.xpath("//div[@id='nav-container']/div[2]/div/h2")).click();
         //driver.findElement(By.xpath("//div[@id='nav-container']/div[3]/div/h2")).click();
-        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 // ERROR: Caught exception [unknown command []]
 
     }
