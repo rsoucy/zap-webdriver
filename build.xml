@@ -13,7 +13,7 @@
     <property name="zaphome" location="${zapdir}/ZAP_2.4.0" />
 
     <path id="build.classpath">
-        <fileset dir="${zapdir}" includes="zap-api-v2-4.jar"/>
+        <fileset dir="${zaphome}" includes="zap-api-v2-4.jar"/>
     </path>
 
 	<taskdef name="accessUrlTask" classname="org.zaproxy.clientapi.ant.AccessUrlTask" classpathref="build.classpath" />
@@ -34,7 +34,7 @@
 			<arg value="-dir"/>
 			<arg value="${zaphome}"/>
 			<classpath>
-				<pathelement location="${zapdir}/zap-api-v2-4.jar"/>
+				<pathelement location="${zaphome}/zap-api-v2-4.jar"/>
 			</classpath>
 		</java>
 		<!-- Give ZAP a chance to start -->
@@ -49,7 +49,7 @@
 			<arg value="-dir"/>
 			<arg value="${zaphome}"/>
 			<classpath>
-				<pathelement location="${zapdir}/zap-api-v2-4.jar"/>
+				<pathelement location="${zaphome}/zap-api-v2-4.jar"/>
 			</classpath>
 		</java>
 		<!-- Give ZAP a chance to start -->
