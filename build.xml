@@ -34,7 +34,7 @@
 			<arg value="-dir"/>
 			<arg value="${zaphome}"/>
 			<classpath>
-				<pathelement location="${zaphome}/zap-api-v2-4.jar"/>
+				<pathelement location="${zaphome}/zap-2.4.0.jar"/>
 			</classpath>
 		</java>
 		<!-- Give ZAP a chance to start -->
