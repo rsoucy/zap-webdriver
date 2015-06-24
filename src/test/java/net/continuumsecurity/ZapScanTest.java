@@ -144,7 +144,6 @@ public class ZapScanTest {
         while (complete < 100) {
             complete = zapScanner.getScanProgress(currentScanID);
             log.info("Scan is " + complete + "% complete.");
-            zapScanner.getHtmlReport();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
