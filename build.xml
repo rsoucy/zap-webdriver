@@ -28,7 +28,7 @@
 	<taskdef name="alert" classname="org.zaproxy.clientapi.ant.AlertTask" classpathref="build.classpath" />
 
 	<target name="startZap">
-		<java classname="org.zaproxy.zap.ZAP" fork="true" spawn="true" dir="${zapdir}">
+		<java classname="org.zaproxy.zap.ZAP" fork="true" spawn="true" dir="${zaphome}">
 			<arg value="-port"/>
 			<arg value="${zapport}"/>
 			<arg value="-dir"/>
