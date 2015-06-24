@@ -121,32 +121,6 @@
 	    	<ignoreAlert alert="Absence of Anti-CSRF Tokens" />
 	    	<ignoreAlert alert="Anti CSRF tokens scanner" />
 
-	    <!-- 	<requireAlert alert="Application Error disclosure" risk="Medium" reliability="Warning" 
-	    	    url="${targetApp}passive/info/info-server-stack-trace.jsp"/>
-	    	<requireAlert alert="Weak Authentication Method" risk="Medium" reliability="Warning" 
-	    	    url="${targetApp}passive/session/weak-authentication-basic.jsp"/>
-	    	<requireAlert alert="Cookie set without HttpOnly flag" risk="Low" reliability="Warning" 
-	    		url="${targetApp}passive/info/info-app-stack-trace.jsp"/>
-	    	<requireAlert alert="Password Autocomplete in browser" risk="Low" reliability="Warning" 
-	    			url="${targetApp}passive/session/session-password-autocomplete.jsp"/>
-	    	<requireAlert alert="Cross Site Scripting (Reflected)" risk="High" reliability="Warning"
-	    		url="${targetApp}active/xss/xss-url-basic.jsp.*"/> 
-	    	<requireAlert alert="Cross Site Scripting (Reflected)" risk="High" reliability="Warning" 
-	    		url="${targetApp}active/xss/xss-form-basic.jsp"/> 
-	    	<!-- XXX Following XSS no longer reported...
-	    	<requireAlert alert="Cross site scripting" risk="High" reliability="Warning" 
-	    		url="${targetApp}active/xss/xss-form-strip-script.jsp"/> -->
-	    <!-- 	<requireAlert alert="SQL Injection - Hypersonic SQL" risk="High" reliability="Warning" 
-	    		url="${targetApp}active/inject/inject-sql-url-basic.jsp.*"/>
-	    	<requireAlert alert="SQL Injection - Hypersonic SQL" risk="High" reliability="Warning" 
-	    		url="${targetApp}active/inject/inject-sql-form-basic.jsp"/>
-	    	<!-- The examples might not be available...
-	    	<requireAlert alert="Session ID in URL rewrite" risk="Low" reliability="Warning" 
-	    		url="${targetHost}servlets-examples/servlet/SessionExample.*"/> -->
-	    	<!-- XXX Following XSS no longer reported...
-	    	<requireAlert alert="Cross site scripting" risk="High" reliability="Warning" 
-	    		url="${targetApp}active/xss/xss-form-anti-csrf.jsp"/> -->
-
 	    </alertCheckTask>
 		
 		<!--
