@@ -226,12 +226,12 @@ public class ZapScanTest {
         return scannerIds;
     }
 
-    //private static Proxy createZapProxyConfigurationForWebDriver() {
-    //    Proxy proxy = new Proxy();
-    //    proxy.setHttpProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
-    //    proxy.setSslProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
-    //    return proxy;
-    //}
+    private static Proxy createZapProxyConfigurationForWebDriver() {
+        Proxy proxy = new Proxy();
+        proxy.setHttpProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
+        proxy.setSslProxy(ZAP_PROXYHOST + ":" + ZAP_PROXYPORT);
+        return proxy;
+    }
 
     //private void spiderWithZap() {
     //    zapSpider.excludeFromSpider(myApp.LOGOUT_URL);
