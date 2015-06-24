@@ -151,6 +151,7 @@ public class ZapScanTest {
             }
         }
         log.info("Scanning done.");
+        zapScanner.getHtmlReport();
     }
 
     private String enableZapPolicy(String policyName) {
