@@ -95,7 +95,7 @@
 		<tstamp>
 			<format property="timestamp" pattern="MM-dd-yyyy HH-mm-ss"/>
 		</tstamp>
-	    <saveSessionTask zapAddress="${zapaddr}" zapPort="${zapport}" name=" ${timestamp}" debug="true"/>
+	    <saveSessionTask zapAddress="${zapaddr}" zapPort="${zapport}" name="my.session" debug="true"/>
 
 		<!-- Give the passive scanner thread a chance to catch up -->
 		<sleep seconds="20"/>
