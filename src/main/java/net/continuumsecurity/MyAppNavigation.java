@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
     
 public class MyAppNavigation {
     WebDriver driver;
-    final static String BASE_URL = "http://dev-cloud-auto2:7070/universal-inbox/login";
+    final static String BASE_URL = "http://dev-cloud-auto2:7070/universal-inbox/outbox";
     final static String LOGOUT_URL = "http://dev-cloud-auto2:7070/universal-inbox/logout.jsp";
     final static String USERNAME = "donotreply+1515@lifeimage.com";
     final static String PASSWORD = "lifeimage1_new";
@@ -47,25 +47,26 @@ public class MyAppNavigation {
     public void login() {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get(BASE_URL);
-        driver.findElement(By.linkText("Login")).click();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.id("login_username")).clear();
         driver.findElement(By.id("login_username")).sendKeys(USERNAME);
         driver.findElement(By.id("login_password")).clear();
         driver.findElement(By.id("login_password")).sendKeys(PASSWORD);
-        driver.findElement(By.id("submit")).click();
-        verifyTextPresent("successfully");
+        driver.findElement(By.name("submit")).click();
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
    }
 
-    public void registerUser() {
-        driver.get(BASE_URL+"register.jsp");
-        driver.findElement(By.id("username")).clear();
-        driver.findElement(By.id("username")).sendKeys(USERNAME);
-        driver.findElement(By.id("password1")).clear();
-        driver.findElement(By.id("password1")).sendKeys(PASSWORD);
-        driver.findElement(By.id("password2")).clear();
-        driver.findElement(By.id("password2")).sendKeys(PASSWORD);
-        driver.findElement(By.id("submit")).click();
-    }
+    //public void registerUser() {
+    //    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    //    driver.get(BASE_URL+"register.jsp");
+    //    driver.findElement(By.id("username")).clear();
+    //    driver.findElement(By.id("username")).sendKeys(USERNAME);
+    //    driver.findElement(By.id("password1")).clear();
+    //    driver.findElement(By.id("password1")).sendKeys(PASSWORD);
+    //    driver.findElement(By.id("password2")).clear();
+    //    driver.findElement(By.id("password2")).sendKeys(PASSWORD);
+    //    driver.findElement(By.id("submit")).click();
+    //}
 
     //public void navigateBeforeLogin() {
     //    driver.get(BASE_URL);
@@ -83,7 +84,9 @@ public class MyAppNavigation {
     public void navigateBeforeLogin() {
         driver.get(BASE_URL);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.findElement(By.linkText("forgotpassword")).click();
+        driver.findElement(By.linkText("lifeIMAGE.com")).click();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        //driver.findElement(By.linkText("Solutions")).click();
         //driver.findElement(By.linkText("Doodahs")).click();
         //driver.findElement(By.linkText("Zip a dee doo dah")).click();
         //driver.findElement(By.linkText("About Us")).click();
@@ -93,9 +96,8 @@ public class MyAppNavigation {
         //driver.findElement(By.name("q")).clear();
         //driver.findElement(By.name("q")).sendKeys("test");
         //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-
         //Make sure we're on the page we're supposed to be on
-        verifyTextPresent("Forgot your password?");
+        //verifyTextPresent("Customers");
     //    driver.findElement(By.linkText("Search")).click();
     //    driver.findElement(By.linkText("Advanced Search")).click();
     //    driver.findElement(By.id("product")).clear();
@@ -113,11 +115,21 @@ public class MyAppNavigation {
     }
 
     public void navigateAfterLogin() {
-    //    driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]")).click();
-    //    driver.findElement(By.cssSelector("span.folder-list-item-title")).click();
-    //    driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[3]/div/span[2]")).click();
-    //    driver.findElement(By.cssSelector("span.folder-list-item-title")).click();
-        //driver.implicitly_wait(60);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.findElement(By.linkText("first last")).click();
+        driver.findElement(By.cssSelector("span.menu-item-name")).click();
+        driver.findElement(By.id("li_view_user_EditProfile_0-given-name")).clear();
+        driver.findElement(By.id("li_view_user_EditProfile_0-given-name")).sendKeys("Roger");
+        driver.findElement(By.id("li_view_user_EditProfile_0-family-name")).clear();
+        driver.findElement(By.id("li_view_user_EditProfile_0-family-name")).sendKeys("Soucy");
+        driver.findElement(By.id("li_widget_Button_3")).click();
+
+        //driver.findElement(By.xpath("//div[@id='nav-container']/div/div/ul/li[2]/div/span[2]")).click();
+        //driver.findElement(By.xpath("//div[@id='nav-container']/div[2]/div/h2")).click();
+        //driver.findElement(By.xpath("//div[@id='nav-container']/div[3]/div/h2")).click();
+        driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+// ERROR: Caught exception [unknown command []]
+
     }
 
     public void verifyTextPresent(String text) {
