@@ -121,7 +121,7 @@
 	    	<ignoreAlert alert="Absence of Anti-CSRF Tokens" />
 	    	<ignoreAlert alert="Anti CSRF tokens scanner" />
 
-	    	<requireAlert alert="Application Error disclosure" risk="Medium" reliability="Warning" 
+	    <!-- 	<requireAlert alert="Application Error disclosure" risk="Medium" reliability="Warning" 
 	    	    url="${targetApp}passive/info/info-server-stack-trace.jsp"/>
 	    	<requireAlert alert="Weak Authentication Method" risk="Medium" reliability="Warning" 
 	    	    url="${targetApp}passive/session/weak-authentication-basic.jsp"/>
@@ -136,7 +136,7 @@
 	    	<!-- XXX Following XSS no longer reported...
 	    	<requireAlert alert="Cross site scripting" risk="High" reliability="Warning" 
 	    		url="${targetApp}active/xss/xss-form-strip-script.jsp"/> -->
-	    	<requireAlert alert="SQL Injection - Hypersonic SQL" risk="High" reliability="Warning" 
+	    <!-- 	<requireAlert alert="SQL Injection - Hypersonic SQL" risk="High" reliability="Warning" 
 	    		url="${targetApp}active/inject/inject-sql-url-basic.jsp.*"/>
 	    	<requireAlert alert="SQL Injection - Hypersonic SQL" risk="High" reliability="Warning" 
 	    		url="${targetApp}active/inject/inject-sql-form-basic.jsp"/>
