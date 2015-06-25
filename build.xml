@@ -89,13 +89,13 @@
 		
 		<!-- Active scan the whole site -->
 	    <activeScanSiteTask zapAddress="${zapaddr}" zapPort="${zapport}" url="${targetHost}" debug="true"/>
-		<sleep seconds="180"/>
+		<sleep seconds="10"/>
 
 		<!-- Save to a timestamped session file -->
 		<tstamp>
 			<format property="timestamp" pattern="MM-dd-yyyy HH-mm-ss"/>
 		</tstamp>
-	    <saveSessionTask zapAddress="${zapaddr}" zapPort="${zapport}" name="${workspace} ${timestamp}" debug="true"/>
+	    <saveSessionTask zapAddress="${zapaddr}" zapPort="${zapport}" name="${workspace} ZAP" debug="true"/>
 
 		<!-- Give the passive scanner thread a chance to catch up -->
 		<sleep seconds="180"/>
