@@ -112,13 +112,19 @@
 			    The url, param and other fields are all regexs 
 	    	 -->
 	    	<ignoreAlert alert="Cookie set without HttpOnly flag" risk="Low" reliability="Warning"/>
-	    	<ignoreAlert alert="URL Redirector Abuse" risk="High" reliability="Warning"/> 
-	    	<!-- Ignore all of the following for now -->
-	    	<ignoreAlert alert="X-Content-Type-Options header missing" />
-	    	<ignoreAlert alert="X-Frame-Options header not set" />
-	    	<ignoreAlert alert="HTTP Parameter Override" />
-	    	<ignoreAlert alert="Absence of Anti-CSRF Tokens" />
-	    	<ignoreAlert alert="Anti CSRF tokens scanner" />
+                <ignoreAlert alert="URL Redirector Abuse" risk="High" reliability="Warning"/> 
+
+                <requireAlert alert="Cookie set without HttpOnly flag" risk="Low" reliability="Warning"/>
+                <requireAlert alert="Password Autocomplete in browser" risk="Low" reliability="Warning"/>
+                <requireAlert alert="Cross site scripting" risk="High" reliability="Warning"/> 
+                <requireAlert alert="Cross site scripting" risk="High" reliability="Warning"/> 
+                <requireAlert alert="Cross site scripting" risk="High" reliability="Warning"/> 
+                <requireAlert alert="SQL Injection Fingerprinting" risk="High" reliability="Suspicious"/>
+                <requireAlert alert="SQL Injection Fingerprinting" risk="High" reliability="Suspicious"/>
+                <requireAlert alert="SQL Injection" risk="High" reliability="Suspicious"/>
+                <requireAlert alert="SQL Injection" risk="High" reliability="Suspicious"/>
+                <requireAlert alert="Session ID in URL rewrite" risk="Low" reliability="Warning"/>
+                <requireAlert alert="Cross site scripting" risk="High" reliability="Warning"/>
 
 	    </alertCheckTask>
 		
