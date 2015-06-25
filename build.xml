@@ -89,7 +89,7 @@
 		
 		<!-- Active scan the whole site -->
 	    <activeScanSiteTask zapAddress="${zapaddr}" zapPort="${zapport}" url="${targetHost}" debug="true"/>
-		<sleep seconds="75"/>
+		<sleep seconds="180"/>
 
 		<!-- Save to a timestamped session file -->
 		<tstamp>
