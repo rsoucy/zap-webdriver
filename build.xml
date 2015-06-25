@@ -42,7 +42,7 @@
 	</target>
 
 	<target name="startZapDaemon">
-		<java classname="org.zaproxy.zap.ZAP" fork="true" spawn="true" dir="${zapdir}">
+		<java classname="org.zaproxy.zap.ZAP" fork="true" spawn="true" dir="${zaphome}">
 			<arg value="-daemon"/>
 			<arg value="-port"/>
 			<arg value="${zapport}"/>
