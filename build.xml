@@ -98,7 +98,7 @@
 	    <saveSessionTask zapAddress="${zapaddr}" zapPort="${zapport}" name="${workspace} ${timestamp}" debug="true"/>
 
 		<!-- Give the passive scanner thread a chance to catch up -->
-		<sleep seconds="20"/>
+		<sleep seconds="180"/>
 		
 		<!-- Check the alerts logged -->
 	    <alertCheckTask zapAddress="${zapaddr}" zapPort="${zapport}" debug="true">
