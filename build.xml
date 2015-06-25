@@ -112,8 +112,7 @@
 			    The url, param and other fields are all regexs 
 	    	 -->
 	    	<ignoreAlert alert="Cookie set without HttpOnly flag" risk="Low" reliability="Warning"/>
-	    	<ignoreAlert alert="URL Redirector Abuse" risk="High" reliability="Warning" 
-	    		url="${targetApp}active/redirect/redirect-url-basic.jsp?redir=http://www.owasp.org"/> 
+	    	<ignoreAlert alert="URL Redirector Abuse" risk="High" reliability="Warning"/> 
 	    	<!-- Ignore all of the following for now -->
 	    	<ignoreAlert alert="X-Content-Type-Options header missing" />
 	    	<ignoreAlert alert="X-Frame-Options header not set" />
