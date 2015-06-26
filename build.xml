@@ -113,6 +113,9 @@
 	    	 -->
 	    	<ignoreAlert alert="Cookie set without HttpOnly flag" risk="Low" reliability="Warning"/>
                 <ignoreAlert alert="URL Redirector Abuse" risk="High" reliability="Warning"/>
+                <ignoreAlert alert="X-Frame-Options Header Not Set" risk="Medium" reliability="Warning"/>
+                <ignoreAlert alert="X-Content-Type-Options Header Missing" risk="Low" reliability="Warning"/>
+                
 
 	    </alertCheckTask>
 		
