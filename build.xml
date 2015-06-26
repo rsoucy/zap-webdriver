@@ -111,6 +111,8 @@
 			    will ignore all alerts with a Low risk and Warning reliability
 			    The url, param and other fields are all regexs 
 	    	 -->
+	    	<ignoreAlert risk="Low" reliability="Warning"/>
+	    	<ignoreAlert risk="Medium" reliability="Warning"/>
 	    	<ignoreAlert alert="Cookie set without HttpOnly flag" risk="Low" reliability="Warning"/>
                 <ignoreAlert alert="URL Redirector Abuse" risk="High" reliability="Warning"/>
                 <ignoreAlert alert="X-Frame-Options Header Not Set" risk="Medium" reliability="Warning"/>
